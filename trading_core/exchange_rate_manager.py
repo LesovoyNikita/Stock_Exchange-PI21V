@@ -1,5 +1,5 @@
 import requests
-
+EXCHANGE_API = "https://api.cbr.ru/old-api"
 class ExchangeRateManager:
     @staticmethod
     def get_cbr_rates():
