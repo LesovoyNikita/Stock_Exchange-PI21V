@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock_Exchange-PI21V</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Stock_Exchange-PI21V</h1>
+        <p>Платформа для торговли фиатными и криптовалютами</p>
+        <nav>
+            <ul>
+                <li><a href="#overview">Обзор проекта</a></li>
+                <li><a href="#modules">Модули системы</a></li>
+                <li><a href="#development">Разработка проекта</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="overview">
+        <h2>Обзор проекта</h2>
+        <p>Stock_Exchange-PI21V — это комплексная платформа для торговли фиатными валютами (USD, RUB, CNY) и криптовалютами (BTC, ETH). Поддерживает динамическое обновление курсов и полную функциональность транзакций, что делает ее универсальным инструментом для современных финансовых операций.</p>
+    </section>
+    <section id="modules">
+        <h2>Модули системы</h2>
+        <div class="module">
+            <h3>1. CurrencyManager — Управление валютами</h3>
+            <p><strong>Описание:</strong> Добавление, обновление и конвертация валют/криптовалют.</p>
+            <p><strong>Функции:</strong></p>
+            <ul>
+                <li>Поддержка фиата (USD, RUB, CNY) и крипты (BTC, ETH).</li>
+                <li>Конвертация по актуальным курсам.</li>
+                <li>Управление списком активных валют.</li>
+            </ul>
+            <p><a href="https://github.com/LesovoyNikita/Stock_Exchange-PI21V/blob/main/trading_core/currency_manager.py">Исходный код</a></p>
+        </div>
+        <div class="module">
+            <h3>2. ExchangeRateManager — Курсы валют</h3>
+            <p><strong>Описание:</strong> Получение и обновление курсов.</p>
+            <p><strong>Функции:</strong></p>
+            <ul>
+                <li>Интеграция с API (ЦБ РФ, CoinGecko).</li>
+                <li>Ручная корректировка курсов.</li>
+                <li>История изменений курсов.</li>
+            </ul>
+            <p><a href="https://github.com/LesovoyNikita/Stock_Exchange-PI21V/blob/main/trading_core/exchange_rate_manager.py">Исходный код</a></p>
+        </div>
+        <div class="module">
+            <h3>3. CryptoCurrencyManager — Криптовалюты</h3>
+            <p><strong>Описание:</strong> Управление криптотранзакциями и кошельками.</p>
+            <p><strong>Функции:</strong></p>
+            <ul>
+                <li>Генерация кошельков.</li>
+                <li>Переводы между пользователями.</li>
+                <li>Интеграция с блокчейн-сетями.</li>
+            </ul>
+            <p><a href="https://github.com/LesovoyNikita/Stock_Exchange-PI21V/blob/main/trading_core/crypto_manager.py">Исходный код</a></p>
+        </div>
+        <div class="module">
+            <h3>4. TradingEngine — Торговый движок</h3>
+            <p><strong>Описание:</strong> Обработка ордеров и сделок.</p>
+            <p><strong>Функции:</strong></p>
+            <ul>
+                <li>Лимитные/рыночные ордера.</li>
+                <li>Стакан заявок (bid/ask).</li>
+                <li>Расчет комиссий.</li>
+            </ul>
+            <p><a href="https://github.com/LesovoyNikita/Stock_Exchange-PI21V/blob/main/trading_core/trading_engine.py">Исходный код</a></p>
+        </div>
+        <div class="module">
+            <h3>5. UserManager — Пользователи</h3>
+            <p><strong>Описание:</strong> Регистрация и аутентификация.</p>
+            <p><strong>Функции:</strong></p>
+            <ul>
+                <li>2FA и восстановление пароля.</li>
+                <li>Ролевая модель (трейдер, админ).</li>
+            </ul>
+            <p><a href="https://github.com/LesovoyNikita/Stock_Exchange-PI21V/blob/main/user_management/user_manager.py">Исходный код</a></p>
+        </div>
+        <div class="module">
+            <h3>6. WalletManager — Кошельки</h3>
+            <p><strong>Описание:</strong> Управление балансами.</p>
+            <p><strong>Функции:</strong></p>
+            <ul>
+                <li>Пополнение/вывод средств.</li>
+                <li>Конвертация валют внутри кошелька.</li>
+            </ul>
+            <p><a href="https://github.com/LesovoyNikita/Stock_Exchange-PI21V/blob/main/user_management/wallet_manager.py">Исходный код</a></p>
+        </div>
+        <div class="module">
+            <h3>7. TransactionHistory — История операций</h3>
+            <p><strong>Описание:</strong> Логирование транзакций.</p>
+            <p><strong>Функции:</strong></p>
+            <ul>
+                <li>Фильтры по дате, типу, валюте.</li>
+                <li>Экспорт в CSV/PDF.</li>
+            </ul>
+            <p><a href="https://github.com/LesovoyNikita/Stock_Exchange-PI21V/blob/main/user_management/transaction_history.py">Исходный код</a></p>
+        </div>
+        <div class="module">
+            <h3>8. AdminPanel — Администрирование</h3>
+            <p><strong>Описание:</strong> Управление платформой.</p>
+            <p><strong>Функции:</strong></p>
+            <ul>
+                <li>Статистика и аналитика.</li>
+                <li>Настройка лимитов и комиссий.</li>
+            </ul>
+            <p><a href="https://github.com/LesovoyNikita/Stock_Exchange-PI21V/blob/main/admin_tools/admin_panel.py">Исходный код</a></p>
+        </div>
+        <div class="module">
+            <h3>9. ExternalAPIIntegration — Внешние API</h3>
+            <p><strong>Описание:</strong> Интеграция с сервисами.</p>
+            <p><strong>Функции:</strong></p>
+            <ul>
+                <li>REST API для курсов валют.</li>
+                <li>Платежные шлюзы (PayPal, Qiwi).</li>
+            </ul>
+            <p><a href="https://github.com/LesovoyNikita/Stock_Exchange-PI21V/blob/main/admin_tools/api_integration.py">Исходный код</a></p>
+        </div>
+        <div class="module">
+            <h3>10. NotificationSystem — Уведомления</h3>
+            <p><strong>Описание:</strong> Оповещения пользователей.</p>
+            <p><strong>Функции:</strong></p>
+            <ul>
+                <li>Email/SMS/push-уведомления.</li>
+                <li>Кастомизация настроек.</li>
+            </ul>
+            <p><a href="https://github.com/LesovoyNikita/Stock_Exchange-PI21V/blob/main/admin_tools/notification_system.py">Исходный код</a></p>
+        </div>
+    </section>
+    <section id="development">
+        <h2>Разработка проекта</h2>
+        <p>Платформа Stock_Exchange-PI21V была разработана через серию лабораторных работ. Вот краткое описание каждой:</p>
+        <div class="lab">
+            <h3>Лабораторная работа 1: Базовые принципы работы с системами контроля версий</h3>
+            <p>Получить практические навыки использования систем контроля версий, составить план разработки выбранного проекта</p>
+            <p><a href="https://github.com/LesovoyNikita/Stock_Exchange-PI21V/blob/main/Labs/Lab1PI21VLesovoy.docx">Лабораторная</a></p>
+        </div>
+        <div class="lab">
+            <h3>Лабораторная работа 2: Работа с ветками</h3>
+            <p>Познакомиться с основами использования веток в системе контроля версий Git. </p>
+            <p><a href="https://github.com/LesovoyNikita/Stock_Exchange-PI21V/blob/main/Labs/PPPI_lab_2_LesovoyPI21V.docx">Лабораторная</a></p>
+        </div>
+        <div class="lab">
+            <h3>Лабораторная работа 3: Восстановление данных из ранних ревизий</h3>
+            <p>получить практические навыки в совместной разработке программного средствами системы контроля версий Git, а также использование инструмента восстановления предыдущих ревизий.</p>
+            <p><a href="https://github.com/LesovoyNikita/Stock_Exchange-PI21V/blob/main/Labs/PPPI_lab_3_PI21VLesovoy.docx">Лабораторная</a></p>
+        </div>
+        <div class="lab">
+            <h3>Лабораторная работа 4: Создание самодокументирующегося кода</h3>
+            <p>Научиться добавлять в программный код специальным образом оформление докблок-комментарии, для последующей автоматической генерации API reference, а также познакомиться с форматом оформления документации DocBook.</p>
+            <p><a href="https://github.com/LesovoyNikita/Stock_Exchange-PI21V/blob/main/Labs/PPPI_lab_4%20(3).docx">Лабораторная</a></p>
+        </div>
+        <div class="lab">
+            <h3>Лабораторная работа 5: Разработка ручной документации</h3>
+            <p>Получить практические навыки в разработке справочного руководства в форматах CHM и HTA.</p>
+            <p><a href="https://github.com/LesovoyNikita/Stock_Exchange-PI21V/blob/main/Labs/PPPI_lab_5%20(3).docx">Лабораторная</a></p>
+        </div>
+    </section>
+    <footer>
+        <p>Разработано Lesovoy_Nikita для PPI</p>
+    </footer>
+</body>
+</html>
