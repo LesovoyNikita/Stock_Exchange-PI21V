@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd">
+<article lang="ru">
+  <articleinfo>
+    <title>Документация платформы Stock Exchange</title>
+    <author>
+      <firstname>Nikita</firstname>
+      <surname>Lesovoy</surname>
+    </author>
+  </articleinfo>
+
+  <section id="description">
+    <title>Краткое описание продукта</title>
+    
+    <para>Stock Exchange — это современная торговая платформа, объединяющая возможности работы 
+    с фиатными валютами и криптоактивами. Система предоставляет трейдерам инструменты для 
+    мгновенных операций конвертации, поддерживает лимитные ордера и обеспечивает интеграцию 
+    с внешними платежными системами.</para>
+    
+    <para>Архитектура решения построена на модульной основе, что позволяет гибко масштабировать 
+    функционал. Ядро системы включает механизмы автоматического обновления курсов через 
+    API ЦБ РФ и CoinGecko, а также реализует безопасное хранение учетных данных 
+    с использованием алгоритмов хеширования PBKDF2.</para>
+    
+    <para>Особое внимание уделено безопасности транзакций. Все операции с кошельками 
+    защищены двухфакторной аутентификацией, а для генерации криптовалютных адресов 
+    используются криптографически безопасные методы генерации случайных чисел.</para>
+    
+    <para>Административный модуль предоставляет расширенные возможности мониторинга: 
+    отслеживание суточных объемов торгов, управление комиссиями и экспорт истории 
+    операций в форматы CSV/PDF через интуитивно понятный веб-интерфейс.</para>
+    
+    <para>Система поддерживает мультиязычную локализацию и адаптирована для работы 
+    в различных юрисдикциях с учетом требований регуляторов к финансовым операциям.</para>
+  </section>
+
+  <section id="scenarios">
+    <title>Сценарии использования</title>
+
+    <section id="scenario1">
+      <title>Конвертация валют</title>
+      <para>Пример использования CurrencyManager для конвертации RUB в USD:</para>
+      <programlisting language="python"><![CDATA[
+manager = CurrencyManager()
+result = manager.convert(1000, "RUB", "USD")
+print(f"Результат конвертации: {result:.2f} USD")
+]]></programlisting>
+    </section>
+
+    <section id="scenario2">
+      <title>Регистрация пользователя</title>
+      <para>Создание нового аккаунта с верификацией пароля:</para>
+      <programlisting language="python"><![CDATA[
+user_manager = UserManager()
+user_manager.register_user("user@example.com", "SecurePass123")
+
+# Проверка аутентификации
+is_valid = user_manager.verify_user("user@example.com", "SecurePass123")
+print(f"Верификация успешна: {is_valid}")
+]]></programlisting>
+    </section>
+
+    <section id="scenario3">
+      <title>Размещение лимитного ордера</title>
+      <para>Создание ордера на покупку BTC по указанной цене:</para>
+      <programlisting language="python"><![CDATA[
+engine = TradingEngine()
+engine.place_limit_order("BUY", 45000.0, 0.5)
+print(f"Активных ордеров: {len(engine.orders)}")
+]]></programlisting>
+    </section>
+  </section>
+</article>

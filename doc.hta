@@ -1,0 +1,182 @@
+<html>
+<head>
+<title>Документация пользователя Stock_Exchange</title>
+  <meta charset="UTF-8">
+  <HTA:APPLICATION
+    ID="stock_exchange_docs"
+    APPLICATIONNAME="Документация Stock_Exchange"
+    VERSION="1.0"
+    WIDTH="800"
+    HEIGHT="600"
+    SCROLL="yes"
+    SINGLEINSTANCE="yes"
+  />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      max-width: 1200px;
+    }
+    .fixed-image {
+      width: 700px;
+      height: 450px;
+      object-fit: contain;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      padding: 5px;
+      margin: 10px 0;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .image-container {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .image-caption {
+      font-style: italic;
+      color: #666;
+      font-size: 0.9em;
+      margin-top: 5px;
+    }
+    h2 {
+      color: #2c3e50;
+      border-bottom: 2px solid #3498db;
+      padding-bottom: 5px;
+    }
+    h3 {
+      color: #34495e;
+      margin-top: 25px;
+    }
+    ul, ol {
+      margin-left: 30px;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+  <h1>Документация пользователя Stock_Exchange</h1>
+  <p>Добро пожаловать в документацию пользователя для Stock_Exchange, платформы для торговли фиатными и криптовалютами.</p>
+
+  <h2>Модули платформы</h2>
+  <p>Платформа Stock_Exchange состоит из следующих модулей:</p>
+  <ul>
+    <li><strong>CurrencyManager</strong>: Управляет списком поддерживаемых валют и выполняет конвертацию.</li>
+    <li><strong>ExchangeRateManager</strong>: Получает и обновляет курсы обмена через внешние API.</li>
+    <li><strong>CryptoCurrencyManager</strong>: Обрабатывает криптовалютные транзакции и генерацию кошельков.</li>
+    <li><strong>TradingEngine</strong>: Обрабатывает торговые ордера и сопоставляет заявки на покупку/продажу.</li>
+    <li><strong>UserManager</strong>: Управляет регистрацией, аутентификацией и ролями пользователей.</li>
+    <li><strong>WalletManager</strong>: Управляет кошельками и балансами пользователей.</li>
+    <li><strong>TransactionHistory</strong>: Ведет журнал транзакций и предоставляет доступ к истории.</li>
+    <li><strong>AdminPanel</strong>: Предоставляет инструменты для администрирования платформы.</li>
+    <li><strong>ExternalAPIIntegration</strong>: Интегрируется с внешними сервисами, такими как платежные шлюзы.</li>
+    <li><strong>NotificationSystem</strong>: Отправляет уведомления пользователям через email, SMS и т.д.</li>
+  </ul>
+
+  <h2>Руководство для пользователей</h2>
+  
+  <h3>Начало работы</h3>
+  <p>Чтобы начать использовать Stock_Exchange, зарегистрируйте аккаунт. Нажмите "Регистрация", заполните email и пароль. После регистрации вы получите письмо для подтверждения. После подтверждения вы можете войти в систему.</p>
+  <div class="image-container">
+    <img src='https://cdn.dribbble.com/userupload/41564522/file/original-2fbd88ef2c3eac9c920ee5326716105f.jpg' 
+         alt='Форма регистрации' 
+         class="fixed-image">
+    <div class="image-caption">Рисунок 1: Форма регистрации</div>
+  </div>
+
+  <h3>Управление кошельками</h3>
+  <p>После входа вы можете управлять своими кошельками. Вы можете вносить средства, выводить их, переводить другим пользователям и конвертировать валюты.</p>
+  <div class="image-container">
+    <img src='https://cdn.dribbble.com/userupload/9454632/file/original-68d9084a44837986bf0f66a878ad3694.png' 
+         alt='Страница депозита' 
+         class="fixed-image">
+    <div class="image-caption">Рисунок 2: Страница депозита</div>
+  </div>
+
+  <h3>Торговля</h3>
+  <p>Вы можете торговать различными валютными парами, включая фиатные и криптовалюты. Вы можете размещать лимитные или рыночные ордера.</p>
+  <div class="image-container">
+    <img src='https://cdn.dribbble.com/userupload/10923017/file/original-f446ab8619a7c7462fb16bd536814873.png' 
+         alt='Форма размещения ордера' 
+         class="fixed-image">
+    <div class="image-caption">Рисунок 3: Форма размещения ордера</div>
+  </div>
+
+  <h3>История транзакций</h3>
+  <p>Вы можете просматривать историю транзакций, фильтровать по дате, типу и валюте, а также экспортировать данные в CSV или PDF.</p>
+  <div class="image-container">
+    <img src='https://public.bnbstatic.com/image/cms/article/body/202210/b20fe8ff46ec312f09ce857943625907.png' 
+         alt='История транзакций' 
+         class="fixed-image">
+    <div class="image-caption">Рисунок 4: Страница истории транзакций</div>
+  </div>
+
+  <h3>Уведомления</h3>
+  <p>Вы можете настроить уведомления о изменениях цен или других событиях через email, SMS или пуш-уведомления.</p>
+  <div class="image-container">
+    <img src='https://fsr-develop.ru/wp-content/uploads/2024/03/image-160.png' 
+         alt='Настройки уведомлений' 
+         class="fixed-image">
+    <div class="image-caption">Рисунок 5: Настройки уведомлений</div>
+  </div>
+
+  <h2>Руководство для администраторов</h2>
+  
+  <h3>Панель администратора</h3>
+  <p>Администраторы могут получить доступ к панели администратора для просмотра статистики, управления настройками и конфигурации платформы.</p>
+  <div class="image-container">
+    <img src='https://cdn.dribbble.com/userupload/24136321/file/original-5446c52a7a33d0b3698d1c19e0d8de32.jpg' 
+         alt='Панель администратора' 
+         class="fixed-image">
+    <div class="image-caption">Рисунок 6: Панель администратора</div>
+  </div>
+
+  <h3>Управление валютами</h3>
+  <p>Администраторы могут добавлять или удалять поддерживаемые валюты и интегрировать их с API курсов обмена.</p>
+  <div class="image-container">
+    <img src='https://vashbiznesplan.ru/wp-content/uploads/2017/02/club-forex-libertex.jpg' 
+         alt='Управление валютами' 
+         class="fixed-image">
+    <div class="image-caption">Рисунок 7: Интерфейс управления валютами</div>
+  </div>
+
+  <h3>Управление курсами обмена</h3>
+  <p>Администраторы могут мониторить и при необходимости вручную корректировать курсы обмена.</p>
+  <div class="image-container">
+    <img src='https://otdyhsamostoyatelno.ru/wp-content/uploads/2022/07/obmennik_kriptovalut_summa_obmena_.jpg' 
+         alt='Управление курсами' 
+         class="fixed-image">
+    <div class="image-caption">Рисунок 8: Управление курсами обмена</div>
+  </div>
+
+  <h3>Интеграции API</h3>
+  <p>Интегрируйтесь с внешними API для курсов обмена, платежных шлюзов и т.д.</p>
+  <div class="image-container">
+    <img src='https://mycryptocheckout.com/wp-content/uploads/2019/04/binance-api-keys-1024x543.png' 
+         alt='Интеграции API' 
+         class="fixed-image">
+    <div class="image-caption">Рисунок 9: Настройки интеграций API</div>
+  </div>
+
+  <h3>Управление пользователями</h3>
+  <p>Управляйте ролями пользователей, приостанавливайте аккаунты и выполняйте другие административные задачи.</p>
+  <div class="image-container">
+    <img src='https://webteamstorm.ru/web/img/uploads/blog/87cdd38beeeb3a16337bef333e1c8d63647389141bbde1.83964433.jpg' 
+         alt='Управление пользователями' 
+         class="fixed-image">
+    <div class="image-caption">Рисунок 10: Страница управления пользователями</div>
+  </div>
+
+  <h2>Сценарии использования</h2>
+  <ol>
+    <li><strong>Регистрация и верификация пользователя</strong>: Новые пользователи регистрируются, указывая email и пароль, затем подтверждают аккаунт через письмо.</li>
+    <li><strong>Первый депозит</strong>: Пользователи вносят фиатные средства через банковский перевод.</li>
+    <li><strong>Покупка криптовалюты</strong>: Пользователи размещают рыночный ордер на покупку Bitcoin (BTC) за USD.</li>
+    <li><strong>Установка лимитного ордера</strong>: Пользователи размещают лимитный ордер на продажу Ethereum (ETH) по цене, например, $2,500.</li>
+    <li><strong>Перевод средств</strong>: Пользователи переводят USDT (Tether) на кошелёк другого пользователя на платформе.</li>
+    <li><strong>Просмотр истории транзакций</strong>: Пользователи проверяют историю транзакций за последний месяц и экспортируют данные в CSV.</li>
+    <li><strong>Получение уведомлений о цене</strong>: Пользователи настраивают уведомление, когда цена Bitcoin (BTC) достигнет $50,000.</li>
+    <li><strong>Администратор добавляет новую валюту</strong>: Администратор добавляет новую фиатную валюту (например, EUR) на платформу.</li>
+    <li><strong>Администратор просматривает ежедневные отчёты</strong>: Администратор генерирует отчёт о дневном торговом объёме и активных пользователях.</li>
+    <li><strong>Пользователь выводит средства</strong>: Пользователь выводит свой баланс Bitcoin (BTC) на внешний криптокошелёк.</li>
+  </ol>
+</body>
+</html>
